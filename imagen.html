@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Practica de imagenes</h1>
+    <img src="winter-7661769_1920.jpg" style="max-width:100%;height:auto;">
+    <div style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPLifAV2tOsg7VbOxI9Gv5X4wL94weti3JP1n2Yqy6vcDiD6bFqOpaKfIN_Jwm7umNfU&usqp=CAU);"></div>
+    <img src="winter-7661769_640.jpg">
+    <h2>imagen normal</h2>
+    <img src="winter-7661769_640.jpg" style="max-width: 30%;">
+    <h2>uso de picture</h2>
+    <picture>
+    <source srcset="winter-7661769_640.jpg" media="(max-width: 600px)">
+    <source srcset="winter-7661769_640.jpg" media="(max-width: 1500px)">
+    <source srcset="winter-7661769_640.jpg">
+    <img src="winter-7661769_640.jpg" alt="Flowers">
+    </picture>
+    <h1 style="font-size:14vw">Hello World</h1>
+    <h2>SVG interactivo</h2>
+    <svg viewBox="0 0 800 500" style="width: 100%; height:auto; background:white;">
+        <rect x="50" y="50" width="700" height="400" fill="none" stroke="#666" stroke-width="3"></rect>
+        <rect class="area-hover"
+        x="100" y="100" width="250" height="150"
+        fill="transparent"
+        stroke="red"
+        stroke width="2"
+        onclick="mostrarInfo('recepcion')"
+        style="cursor: pointer;" />
+        
+    </svg>
+<section id="infopanel" class="info-box">
+    <h3>Informacion del Area</h3>
+    <p id="areaInfo">Haz click en cualquier area del plano para ver su informacion tecnica</p>
+    <div id="areaDetails"></div>
+</section>
+<script>
+    //Datos de las areas del sistema
+    const areasData = {
+        recepcion: {
+            nombre: "Recepcion y Atencion al Usuario",
+            responsable: "Ana Martinez",
+            equipos: "3PCs, 1impresora, 1telefono IP",
+            sistema: "Sistema de Tickets v2.1",
+            estado: "Operativo"
+        },
+    };
+    function mostrarInfo(areaKey)
+        const area = areasData[areaKey]
+        const infoPanel = document.getElementById('areainfo');
+        const detailsPanel = document.getElementById('areaDetails');
+
+        if (area) {
+            infoPanel.innerHTML = `<strong>${area.nombre}</strong>`;
+            detailsPanel.innerHTML = `
+                <table>
+                        <tr>
+                            <td><strong>Responsable:</strong></td>
+                            <td>${area.responsable}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Equipos:</strong></td>
+                            <td>${area.equipos}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sistema:</strong></td>
+                            <td>${area.sistema}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estado:</strong></td>
+                            <td>${area.estado}</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Última actualización: ${new Date().toLocaleString()}
+                    </p>`;
+            }
+               
+
+
+</script>
+</body>
+</html>

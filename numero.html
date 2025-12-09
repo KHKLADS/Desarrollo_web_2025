@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase JavaScript</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        function contarPares() {
+            let pares = [];
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    pares.push(i);
+                }
+            }
+            return pares;
+        }
+
+        const appDiv = document.getElementById("app");
+        const numerosPares = contarPares();
+        console.log("Numeros pares:", numerosPares);
+        appDiv.innerHTML = "Numeros pares: " + numerosPares.join(", ");
+
+        const header = document.createElement('h1');
+        const Text = 'Manejo de DOM';
+        const headerContent = document.createTextNode(Text);
+        header.appendChild(headerContent);
+        app.appendChild(header); 
+    </script>
+
+    <section id="contador">
+        <h2>Contador: <span id="valor">0</span></h2>
+        <button id="incrementar">+</button>
+        <button id="decrementar">-</button>
+        <button id="reset">Reset</button>
+    </section>
+    <script>
+        let contador = 0;
+        const valor = document.getElementById("Valor");
+        const incrementar = document.getElementById("incrementar");
+        const decrementar = document.getElementById("decrementar");
+        const reset = document.getElementById("reset");
+
+        function actualizarContador() {
+            calor.textContent = contador;
+        }
+
+        incrementar,addEventListener("click", () => {
+            contador++;
+            actualizarContador();
+        });
+
+
+        ddecrementar.addEventListener("click", () => {
+            contador = 0;
+            actualizarContador();
+        });
+    </script>
+
+</body>
+</html>

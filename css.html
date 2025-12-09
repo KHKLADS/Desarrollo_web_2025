@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        body {
+            background-color: peru;
+        }
+        h1 {
+            color: red;
+        }
+        p {
+            background-color: chartreuse;
+        }
+        .caja {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(13, 76, 212);
+            margin: 20px;
+            padding: 100px;
+            border: 3px solid rgb(255, 191, 0);
+        }
+        .caja-relativa {
+            position: relative;
+            left: 50px;
+            top: 10px;
+        }
+        .elemento-hijo {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 80px;
+            height: 25px;
+            background-color: blue;
+            font-size: 0.8cm;
+            line-height: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola a todos</h1>
+    <h3>Este texto es sin estilos</h3>
+    <p>Texto marcado</p>
+    <p class="caja">ESASDASDKJASKDJASJD</p>
+    <p class="caja-relativa">Caja</p>
+
+    <h1>Ejemplo de contenedor de posicionamiento relativo</h1>
+
+    <div class="caja caja-relativa">Caja </div>
+        <div class="caja elemento-hijo">soy el hijo</div>
+    <svg width="400" height="300">
+        <image href="paisaje.jpg" x="50" y="50" width="300" height="200" />
+    </svg>
+    
+    <!--Celular 320px-480px
+    Celular Grande 481px-767px
+    Tablet vertical 768px-1024px
+    Tablet horizontal o laptop pequeña 1025px-1280px
+    Computadora 1280px -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase JavaScript</title>
+</head>
+<body>
+    <section id="app">
+        <h1>Verificar Edad</h1>
+
+        <label>Ingresa tu edad:</label>
+        <input type="number" id="edad" min="0" required>
+        <br><br>
+
+        <button id="verificarBtn">Verificar</button>
+
+        <div id="resultado" style="margin-top: auto; font-size: medium;"></div>
+    </section>
+
+    <script>
+        const boton = document.getElementById("verificarBtn");
+        const resultadoDiv = document.getElementById("resultado"); 
+
+        boton.addEventListener("click", function() {
+            const edad = parseInt(document.getElementById("edad").value);
+
+            if (isNaN(edad)) {
+                console.log("Debes ingresar un número válido");
+                return;
+            }
+
+            if (edad >= 18) {
+                console.log("Eres mayor de edad");
+                resultadoDiv.textContent = "Eres Mayor de Edad";
+            } else {
+                console.log("Eres menor de edad");
+                resultadoDiv.textContent = "Eres Menor de Edad";
+            }
+        });
+    </script>
+</body>
+</html>
